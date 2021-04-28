@@ -1,0 +1,7 @@
+const ISLOGIN = 'ISLOGIN';
+const TOKENACCOUNT = 'TOKENACCOUNT';
+
+export {
+    ISLOGIN,
+    TOKENACCOUNT
+};

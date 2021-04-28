@@ -1,23 +1,55 @@
 {
     "env": {
         "browser": true,
-        "es2021": true,
+        "commonjs": true,
+        "es6": true,
         "node": true
     },
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended"
     ],
+    "parser": "babel-eslint",
     "parserOptions": {
+        "ecmaVersion": 2018,
         "ecmaFeatures": {
-            "jsx": true
+            "jsx": true,
+            "classes": true
         },
-        "ecmaVersion": 12,
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "babel"
     ],
+    "globals": {
+        "__basePath": true,
+        "__base": true,
+        "$": true,
+        "import": true
+    },
     "rules": {
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "never"
+        ],
+        "no-console": "off",
+        "no-unused-vars": "warn",
+        "require-atomic-updates": 1
     }
 }
